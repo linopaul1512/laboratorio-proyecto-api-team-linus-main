@@ -1,0 +1,30 @@
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Services.deps.json
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Services.dll
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Services.pdb
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Core.dll
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Core.pdb
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.csproj.CopyComplete
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.dll
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\refint\Services.dll
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.pdb
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\ref\Services.dll
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Services.deps.json
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Services.dll
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Services.pdb
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Core.dll
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\bin\Debug\net8.0\Core.pdb
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.csproj.Up2Date
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.dll
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\refint\Services.dll
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.pdb
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\ref\Services.dll
