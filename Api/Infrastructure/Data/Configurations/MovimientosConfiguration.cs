@@ -18,7 +18,16 @@ namespace Infrastructure.Data.Configurations
                         
             builder.HasOne(x => x.Tipo) 
                 .WithMany() 
-                .HasForeignKey(x => x.IDMovimiento); 
+                .HasForeignKey(x => x.IDTipo); 
+
+            builder.HasOne(x => x.CuentaAcreditada) 
+                .WithMany() 
+                .HasForeignKey(x => x.IDCuentaAcreditada); 
+
+            builder.HasOne(x => x.CuentaDebitada) 
+                .WithMany() 
+                .HasForeignKey(x => x.IDCuentaDebitada); 
+
 
             builder.Property(x => x.Fecha).IsRequired().HasMaxLength(35);
             builder.Property(x => x.Monto).IsRequired().HasMaxLength(35);  

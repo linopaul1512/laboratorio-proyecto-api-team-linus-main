@@ -21,7 +21,8 @@ namespace Infrastructure.Data
         private UsuariosRepository _usuarioRepository;  
         private ArchivosRepository _archivoRepository;  
         private SesionesRepository _sesionRepository;
-        
+        private ArchivosPrestamosRepository _archivosprestamosRepositoy;
+        private TipoArchivosRepository _tipotipoarchivosRepository;
         public UnitOfWork(AppDbContext context)
         {
             this._context = context;
@@ -36,6 +37,8 @@ namespace Infrastructure.Data
         public ITipoMovimientoRepository  TipoMovimientoRepository=> _tipomovimientoRepository  ??= new TipoMovimientoRepository(_context);
         public IArchivosRepository ArchivosRepository => _archivoRepository ??= new ArchivosRepository(_context);
         public ISesionesRepository SesionRepository => _sesionRepository ??= new SesionesRepository(_context);
+        public IArchivosPrestamosRepository ArchivosPrestasmosRepository => _archivosprestamosRepositoy  ??= new ArchivosPrestamosRepository(_context);
+        public ITipoArchivosRepository TipoArchivosRepository => _tipotipoarchivosRepository ??= new TipoArchivosRepository(_context);
         
         public async Task<int> CommitAsync()
         {

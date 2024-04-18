@@ -8,6 +8,9 @@ namespace Core.Interfaces.Servicios
 {
     public interface ICuentasService 
     {
-        
+        Task<Cuentas> GetCuentaById(int id);
+        Task<IEnumerable<Cuentas>> GetAll();
+        Task<Cuentas> CreateCuenta(Cuentas newCuenta);
+        Task<Cuentas> UpdateCuenta(int cuentasToBeUpdatedId, Cuentas newCuentaValues);
     }
 }

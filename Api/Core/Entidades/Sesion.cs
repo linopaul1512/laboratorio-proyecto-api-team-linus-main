@@ -9,7 +9,7 @@ namespace Core.Entidades
     { 
         public int Id {get; set;} 
         public string? Token {get; set;} 
-        public string? CedulaUsuario {get; set;} 
+        public int CedulaUsuario {get; set;} //FK
         public virtual Usuario? UsuarioActual {get; set;} 
     } 
 }

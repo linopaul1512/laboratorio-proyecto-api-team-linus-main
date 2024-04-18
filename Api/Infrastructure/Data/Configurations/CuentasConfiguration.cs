@@ -12,12 +12,13 @@ namespace Infrastructure.Data.Configurations
                 .HasKey(x => x.IDCuenta);
 
             builder.Property(x => x.IDCuenta).IsRequired().HasMaxLength(35); 
-            builder.Property(x => x.Saldo).IsRequired().HasMaxLength(35); 
             
-            builder.HasOne(x => x.CIUsuario) 
+            
+            builder.HasOne(x => x.Usuario) 
                 .WithMany() 
                 .HasForeignKey(x => x.CI); 
-            
+                
+            builder.Property(x => x.Saldo).IsRequired().HasMaxLength(35); 
       
 
 

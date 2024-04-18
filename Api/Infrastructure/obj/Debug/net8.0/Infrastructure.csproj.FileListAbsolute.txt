@@ -32,3 +32,5 @@ C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Infrastruct
 C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
 C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json

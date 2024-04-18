@@ -16,8 +16,7 @@ namespace Services.Validators
             .Must(id => id.ToString().Length == 12)
             .WithMessage("IDCuenta debe tener exactamente 12 dígitos.");
         
-            RuleFor(x => x.CIUsuario);
-            RuleFor(x => x.CI);
+            
             RuleFor(x => x.Saldo);
         }
     }

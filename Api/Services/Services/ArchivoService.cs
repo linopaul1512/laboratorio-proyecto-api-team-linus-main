@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-/*using Core.Entidades;
+using Core.Entidades;
 using Core.Interfaces;
 using Core.Interfaces.Repositorios;
 using Core.Interfaces.Servicios;
@@ -28,58 +28,61 @@ namespace Services.Services
         }
         public async Task<Archivos> UpdateArchivo(int id, Archivos archivos)
         {
-            UsuariosValidacion validaciones = new();
-            var validationResult = await validaciones.ValidateAsync(usuario);
+            ArchivosValidators validaciones = new();
+            var validationResult = await validaciones.ValidateAsync(archivos);
             if (validationResult.IsValid)
             {
                 var many = await _unitOfWork.ArchivosRepository.GetAllAsync();
                 if (many.Any(x => x.IDArchivo == id))
                 {
-                    await _unitOfWork.UsuarioRepository.Update(usuario);
+                    await _unitOfWork.ArchivosRepository.Update(archivos);
                     await _unitOfWork.CommitAsync();
-                } else throw new ArgumentException("No se pudo actualizar los datos");
+                } else throw new ArgumentException("Se produjo un aerror al modificar los datos");
             } else
             {
                 throw new ArgumentException(validationResult.Errors.ToString());
             }
 
-            return usuario;
+            return archivos;
         }
 
-        public async Task<Usuario> GetUsuarioById(int id)
+ 
+        public async Task<Archivos> GetArchivoById(int id)
         {
-            var muchos = await _unitOfWork.UsuarioRepository.GetAllAsync();
-            var usuario = 
-                muchos.FirstOrDefault(x => x.CI == id) ?? 
-                throw new ArgumentException("Usuario inexistente");
-            return usuario;
+            var muchos = await _unitOfWork.ArchivosRepository.GetAllAsync();
+            var archivo = 
+                muchos.FirstOrDefault(x => x.IDArchivo == id) ?? 
+                throw new ArgumentException("Archivo inexistente");
+            return archivo;
         }
 
-        public async Task<IEnumerable<Usuario>> GetAll()
+        public async Task<IEnumerable<Archivos>> GetAll()
         {
-            return await _unitOfWork.UsuarioRepository.GetAllAsync();
+            return await _unitOfWork.ArchivosRepository.GetAllAsync();
         }
 
-        public async Task<Usuario> CreateUsuario(Usuario usuario)
+        public async Task<Archivos> CreateArchivo(Archivos archivo)
         {
-            UsuariosValidacion validator = new();
+            ArchivosValidators validator = new();
 
-            var validationResult = await validator.ValidateAsync(usuario);
+            var validationResult = await validator.ValidateAsync(archivo);
             if (validationResult.IsValid)
             {
-                var muchos = await _unitOfWork.UsuarioRepository.GetAllAsync();
-                if (!muchos.Any(x => x.CI == usuario.CI))
+                var muchos = await _unitOfWork.ArchivosRepository.GetAllAsync();
+                if (!muchos.Any(x => x.IDArchivo == archivo.IDArchivo))
                 {
-                    await _unitOfWork.UsuarioRepository.AddAsync(usuario);
+                    await _unitOfWork.ArchivosRepository.AddAsync(archivo);
                     await _unitOfWork.CommitAsync();
-                } else throw new ArgumentException("la cédula de identidad ya se encuentra registrada");
+                } else throw new ArgumentException("El archivo ya se encuentra registrado");
             }
             else
             {
                 throw new ArgumentException(validationResult.Errors.ToString());
             }
 
-            return usuario;
+            return archivo;
         }
+
+       
     }
-}*/
+}

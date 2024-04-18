@@ -9,7 +9,7 @@ namespace Core.Entidades
     public class Cuotas
     {
         public int IDCuota {get;set;}
-        public  Prestamos? IDPrestamo {get; set;}
+        public  int IDPrestamo {get; set;}
         public virtual Prestamos? Prestamo {get; set;}
     }
 }

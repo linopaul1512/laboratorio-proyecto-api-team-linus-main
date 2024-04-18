@@ -24,7 +24,12 @@ namespace Infrastructure.Data.Configurations
             
             builder.HasOne(x => x.Prestamo)
                 .WithMany()
-                .HasForeignKey(x => x.IDPrestamo);            
+                .HasForeignKey(x => x.IDPrestamo);       
+
+
+            builder.HasOne(x => x.TipoArchivo)
+                .WithMany()
+                .HasForeignKey(x => x.IDTipoarch);       
         
 
 

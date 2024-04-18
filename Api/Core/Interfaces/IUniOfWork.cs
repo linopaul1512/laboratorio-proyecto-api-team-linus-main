@@ -12,6 +12,8 @@ public interface IUnitOfWork : IDisposable
         ITipoMovimientoRepository TipoMovimientoRepository { get; }
         IArchivosRepository ArchivosRepository { get; }
         ISesionesRepository SesionRepository { get; }
+        IArchivosPrestamosRepository ArchivosPrestasmosRepository { get; }
+        ITipoArchivosRepository TipoArchivosRepository { get; }
 
         Task<int> CommitAsync();
     }

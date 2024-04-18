@@ -9,8 +9,8 @@ namespace Core.Entidades
     public class Cuentas
     {
         public int IDCuenta {get;set;}
-        public  Usuario? CIUsuario {get; set;}
-        public virtual Usuario? CI {get; set;}
+        public  int CI {get; set;}
+        public virtual Usuario? Usuario {get; set;}
         public int Saldo {get; set;}
     }
 }

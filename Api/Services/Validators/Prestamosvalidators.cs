@@ -19,9 +19,7 @@ namespace Services.Validators
             RuleFor(x => x.CantCuotas);
             RuleFor(x => x.IDTasa);
             RuleFor(x => x.IDCuenta);
-            RuleFor(x => x.Cuenta);
             RuleFor(x => x.FechaDeOperacion);
-            RuleFor(x => x.Sueldo);
             RuleFor(x => x.Monto);
         }
     }

@@ -28,3 +28,5 @@ C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\ob
 C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\refint\Services.dll
 C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.pdb
 C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\ref\Services.dll
+C:\Users\user\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.sourcelink.json
+C:\Users\Lino Paul\Documents\laboratorio-proyecto-api-team-linus-main\Api\Services\obj\Debug\net8.0\Services.sourcelink.json
