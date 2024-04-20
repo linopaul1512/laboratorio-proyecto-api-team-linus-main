@@ -19,7 +19,7 @@ using System.Security.Principal;
 
 namespace Services.Services
 {
-    public class SesionService : ISesionesRepository
+    public class SesionService : ISesionService
     {
         private readonly IUnitOfWork _unitOfWork;
         public SesionService(IUnitOfWork unitOfWork)

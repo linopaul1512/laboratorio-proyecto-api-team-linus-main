@@ -30,7 +30,7 @@ builder.Services.AddSwaggerGen(options =>
         TermsOfService = new Uri("https://example.com/terms"),
         Contact = new OpenApiContact
         {
-            Name = "Guillermo Giménez",
+            Name = "Lino y David ",
             Url = new Uri("https://github.com/G3-Graco/laboratorio-proyecto-api-team-linus.git")
         },
         License = new OpenApiLicense
@@ -60,10 +60,22 @@ builder.Services.AddScoped(typeof(ISesionesRepository), typeof(SesionesRepositor
 builder.Services.AddScoped(typeof(ITasasRepository), typeof(TasasRepository));
 builder.Services.AddScoped(typeof(ITipoMovimientoRepository), typeof(TipoMovimientoRepository));
 builder.Services.AddScoped(typeof(IUsuariosRepository), typeof(UsuariosRepository));
+builder.Services.AddScoped(typeof(IArchivosPrestamosRepository), typeof(ArchivosPrestamosRepository));
 
 
 
 builder.Services.AddScoped(typeof(IUsuarioService), typeof(UsuarioService));
+builder.Services.AddScoped(typeof(IArchivosService), typeof(ArchivoService));
+builder.Services.AddScoped(typeof(ICuentasService), typeof(CuentaService));
+builder.Services.AddScoped(typeof(ICuotasService), typeof(CuotaService));
+builder.Services.AddScoped(typeof(IMovimientosService), typeof(MovimientoService));
+builder.Services.AddScoped(typeof(IPrestamosService), typeof(PrestamoService));
+builder.Services.AddScoped(typeof(ISesionService), typeof(SesionService));
+builder.Services.AddScoped(typeof(ITasasService), typeof(TasaService));
+builder.Services.AddScoped(typeof(ITipoArchivosService), typeof(TipoArchivoService));
+builder.Services.AddScoped(typeof(ITipoMovimientoService), typeof(TipoMovimientoService));
+builder.Services.AddScoped(typeof(IArchivosPrestamosRepository), typeof(ArchivosPrestamosRepository));
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

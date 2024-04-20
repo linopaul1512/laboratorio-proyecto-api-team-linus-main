@@ -50,8 +50,8 @@ namespace Web.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<TipoArchivos>> GetTipoArchivoById(int id){
-            var tasas = await _serviceTipoArchivo.GetTipoArchivoById(id);
+        public async Task<ActionResult<TipoArchivos>> GetTipoArchivoByName(string nombre){
+            var tasas = await _serviceTipoArchivo.GetTipoArchivoByName(nombre);
             return Ok(tasas);
         }
 
