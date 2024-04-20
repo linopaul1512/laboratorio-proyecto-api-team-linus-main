@@ -9,6 +9,6 @@ namespace Core.Entidades
     public class Tasas
     {
         public int IDTasa {get;set;}
-        public  int  Porcentaje {get; set;}
+        public  double  Porcentaje {get; set;}
     }
 }

@@ -21,53 +21,52 @@ namespace Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PrestamoController : ControllerBase
+    public class TipoMovimientoController : ControllerBase
     {
         
-       // Llama al método de servicio para realizar el inicio de sesión y obtener el token JWT.
-        private readonly IPrestamosService _prestamoService;
-        public PrestamoController(IPrestamosService prestamoService)
+        private readonly ITipoMovimientoService _serviceTipoMovimiento;
+        public TipoMovimientoController(ITipoMovimientoService serviceTasas)
         {
-            _prestamoService = prestamoService;
+            _serviceTipoMovimiento = serviceTasas;
         }
-
+ 
         
 
         /// <summary>
-        /// Buscar todos los préstamos
+        /// Buscar todos las tipo
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Prestamos>>> GetAll(){
+        public async Task<ActionResult<IEnumerable<TipoMovimiento>>> GetAll(){
 
-            var prestamos = await _prestamoService.GetAll();
+            var tipos = await _serviceTipoMovimiento.GetAll();
 
-            return Ok(prestamos);
+            return Ok(tipos);
         }
 
         /// <summary>
-        /// Buscar préstamo por id
+        /// Buscar tipo por id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<Prestamos>> GetById(int id){
-            var prestamos = await _prestamoService.GetPrestamoById(id);
-            return Ok(prestamos);
+        public async Task<ActionResult<TipoMovimiento>> GetTipoByName(string tipo){
+            var tipos = await _serviceTipoMovimiento.GetTipoByName(tipo);
+            return Ok(tipos);
         }
 
        /// <summary>
-       /// Crear préstamos
+       /// Crear tipo
        /// </summary>
        /// <param name="Objeto"></param>
        /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<Prestamos>> Post([FromBody] Prestamos Objeto)
+        public async Task<ActionResult<TipoMovimiento>> Post([FromBody] TipoMovimiento Objeto)
         {
             try
             {
                 var createdObjeto =
-                    await _prestamoService.CreatePrestamo(Objeto);
+                    await _serviceTipoMovimiento.CreateTipo(Objeto);
 
                 return Ok(createdObjeto);
             }
@@ -77,7 +76,7 @@ namespace Web.Controllers
             }
         }
         
-       
+    
         
       
     }

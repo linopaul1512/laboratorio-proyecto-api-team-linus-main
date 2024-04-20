@@ -8,9 +8,9 @@ namespace Core.Interfaces.Servicios
 {
     public interface ITasasService
     {
-        Task<Tasas> GetTasaById(int id);
+        Task<Tasas> GetTasaByPorcentaje(int id);
+
         Task<IEnumerable<Tasas>> GetAll();
         Task<Tasas> CreateTasa(Tasas newArchivo);
-        Task<Tasas> UpdateTasa(int tasaToBeUpdatedId, Tasas newTasaValues);
     }
 }

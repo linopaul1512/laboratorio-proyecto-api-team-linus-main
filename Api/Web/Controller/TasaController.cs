@@ -21,53 +21,52 @@ namespace Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PrestamoController : ControllerBase
+    public class TasaController : ControllerBase
     {
         
-       // Llama al método de servicio para realizar el inicio de sesión y obtener el token JWT.
-        private readonly IPrestamosService _prestamoService;
-        public PrestamoController(IPrestamosService prestamoService)
+        private readonly ITasasService _serviceTasas;
+        public TasaController(ITasasService userTasas)
         {
-            _prestamoService = prestamoService;
+            _serviceTasas = userTasas;
         }
-
+ 
         
 
         /// <summary>
-        /// Buscar todos los préstamos
+        /// Buscar todos las tasas
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Prestamos>>> GetAll(){
+        public async Task<ActionResult<IEnumerable<Tasas>>> GetAll(){
 
-            var prestamos = await _prestamoService.GetAll();
+            var tasas = await _serviceTasas.GetAll();
 
-            return Ok(prestamos);
+            return Ok(tasas);
         }
 
         /// <summary>
-        /// Buscar préstamo por id
+        /// Buscar tasas por id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<Prestamos>> GetById(int id){
-            var prestamos = await _prestamoService.GetPrestamoById(id);
-            return Ok(prestamos);
+        public async Task<ActionResult<Tasas>> GetTasaByPorcentaje(int id){
+            var tasas = await _serviceTasas.GetTasaByPorcentaje(id);
+            return Ok(tasas);
         }
 
        /// <summary>
-       /// Crear préstamos
+       /// Crear tasa
        /// </summary>
        /// <param name="Objeto"></param>
        /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<Prestamos>> Post([FromBody] Prestamos Objeto)
+        public async Task<ActionResult<Tasas>> Post([FromBody] Tasas Objeto)
         {
             try
             {
                 var createdObjeto =
-                    await _prestamoService.CreatePrestamo(Objeto);
+                    await _serviceTasas.CreateTasa(Objeto);
 
                 return Ok(createdObjeto);
             }
@@ -77,7 +76,7 @@ namespace Web.Controllers
             }
         }
         
-       
+    
         
       
     }

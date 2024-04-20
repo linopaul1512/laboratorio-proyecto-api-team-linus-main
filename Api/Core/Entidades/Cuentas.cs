@@ -11,6 +11,6 @@ namespace Core.Entidades
         public int IDCuenta {get;set;}
         public  int CI {get; set;}
         public virtual Usuario? Usuario {get; set;}
-        public int Saldo {get; set;}
+        public double Saldo {get; set;}
     }
 }

@@ -9,7 +9,7 @@ namespace Core.Interfaces.Servicios
     public interface ITipoArchivosService
     {
         
-        Task<TipoArchivos> GetTipoArchivoById(string nombre);
+        Task<TipoArchivos> GetTipoArchivoById(int id);
         Task<IEnumerable<TipoArchivos>> GetAll();
         Task<TipoArchivos> CreateTipo(TipoArchivos newTipo);
 

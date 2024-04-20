@@ -56,6 +56,15 @@ namespace Services.Services
             return tasas;
         }
 
+        public async Task<Tasas> GetTasaByPorcentaje(int id)
+        {
+            var muchos = await _unitOfWork.TasasRepository.GetAllAsync();
+            var tasas = 
+                muchos.FirstOrDefault(x => x.Porcentaje == id) ?? 
+                throw new ArgumentException("Porcentaje inexistente");
+            return tasas;
+        }
+
         public async Task<IEnumerable<Tasas>> GetAll()
         {
             return await _unitOfWork.TasasRepository.GetAllAsync();

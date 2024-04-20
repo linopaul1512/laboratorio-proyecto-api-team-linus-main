@@ -21,53 +21,52 @@ namespace Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PrestamoController : ControllerBase
+    public class Archivo_PrestamoController : ControllerBase
     {
         
-       // Llama al método de servicio para realizar el inicio de sesión y obtener el token JWT.
-        private readonly IPrestamosService _prestamoService;
-        public PrestamoController(IPrestamosService prestamoService)
+        private readonly IArchivosPrestamosServices _service;
+        public Archivo_PrestamoController(IArchivosPrestamosServices userArchivoPrestamo)
         {
-            _prestamoService = prestamoService;
+            _service = userArchivoPrestamo;
         }
 
         
 
         /// <summary>
-        /// Buscar todos los préstamos
+        /// Buscar todos 
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Prestamos>>> GetAll(){
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetAll(){
 
-            var prestamos = await _prestamoService.GetAll();
+            var archivos = await _service.GetAll();
 
-            return Ok(prestamos);
+            return Ok(archivos);
         }
 
         /// <summary>
-        /// Buscar préstamo por id
+        /// Buscar dato por id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<Prestamos>> GetById(int id){
-            var prestamos = await _prestamoService.GetPrestamoById(id);
-            return Ok(prestamos);
+        public async Task<ActionResult<Archivos_Prestamos>> GetById(int id){
+            var inter = await _service.GetInterById(id);
+            return Ok(inter);
         }
 
-       /// <summary>
-       /// Crear préstamos
+      /* /// <summary>
+       /// Crear dato
        /// </summary>
-       /// <param name="Objeto"></param>
        /// <returns></returns>
+       
         [HttpPost]
-        public async Task<ActionResult<Prestamos>> Post([FromBody] Prestamos Objeto)
+        public async Task<ActionResult<Archivos_Prestamos>> Post([FromBody] Archivos_Prestamos Objeto)
         {
             try
             {
                 var createdObjeto =
-                    await _prestamoService.CreatePrestamo(Objeto);
+                    await _service.CreateInter(Objeto);
 
                 return Ok(createdObjeto);
             }
@@ -75,9 +74,9 @@ namespace Web.Controllers
             {
                 return BadRequest(ex.Message);
             }
-        }
+        }*/
         
-       
+    
         
       
     }
